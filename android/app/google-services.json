@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "84659516671",
+    "project_id": "sih-app-1372",
+    "storage_bucket": "sih-app-1372.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84659516671:android:0640dc189a9b32b30fc8ca",
+        "android_client_info": {
+          "package_name": "com.lakshya.sih_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKpQ45ywZz5giyep42YFxRqeLg-NNGPTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
