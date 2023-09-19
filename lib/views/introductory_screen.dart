@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sih_app/constants/routes.dart';
 
 class Introduction extends StatefulWidget {
   const Introduction({super.key});
@@ -26,39 +27,35 @@ class _IntroductionState extends State<Introduction> {
     ];
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-              child: PageView.builder(
-                itemCount: slides.length,
-                onPageChanged: (index) {
-                  setState(() {
-                    _currentPage = index;
-                  });
-                },
-                itemBuilder: (context, index) {
-                  return IntroductorySlide(
-                    imagePath: slides[index]['image']!);
-                },
-                )
-                ),
-                Row(
-                  children: [
-                    if (_currentPage < slides.length - 1) 
-                      ElevatedButton(
-                        onPressed: () {
-                          setState(() {
-                            _currentPage++;
-                          });
-                        }, 
-                        child: const Text ('Next')),
-                  ],
-                )
-          ],
-        ),
+      return Stack(
+        fit: StackFit.expand,
+        children: [
+          PageView.builder(
+            itemCount: slides.length,
+            onPageChanged: (index) {
+              setState(() {
+                _currentPage = index;
+              });
+            },
+            itemBuilder: (context, index) {
+              return IntroductorySlide(
+                imagePath: slides[index]['image']!);
+            },
+            ),
+            Positioned(
+              bottom: 20.0,
+              left: 20.0,
+              right: 20.0,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                    homeRoute, 
+                    (route) => false);
+                }, 
+                child: const Text('Get Started'))
+              )
+        ],
       );
-
     }
 }
 

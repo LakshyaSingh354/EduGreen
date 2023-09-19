@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sih_app/views/home_page.dart';
 import 'package:sih_app/views/introductory_screen.dart';
+
+import 'constants/routes.dart';
+import 'views/login_view.dart';
+import 'views/register_view.dart';
 
 void main() {
   runApp(
@@ -9,21 +14,13 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       home: const Introduction(),
-    ));
-    routes: {
-        introRoute: (context) => const Introduction();
+      routes: {
+        introRoute: (context) => const Introduction(),
+        loginRoute: (context) => const LoginView(),
+        registerRoute: (context) => const RegisterView(),
+        homeRoute: (context) => const HomePage(),
       }
+    ));
+    
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Home Page"),
-      ),
-    );
-  }
-}
