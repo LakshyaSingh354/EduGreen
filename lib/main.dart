@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sih_app/views/introductory_screen.dart';
 
 void main() {
   runApp(
@@ -7,8 +8,11 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const Introduction(),
     ));
+    routes: {
+        introRoute: (context) => const Introduction();
+      }
 }
 
 class HomePage extends StatelessWidget {
