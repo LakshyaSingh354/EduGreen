@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sih_app/views/home_page.dart';
-import 'package:sih_app/views/login_signup_view.dart';
 import 'package:sih_app/views/welcome_screen.dart';
+import 'package:sih_app/views/home_views/community_page.dart';
 import 'constants/routes.dart';
 import 'services/auth/auth_service.dart';
 import 'views/login_view.dart';
@@ -38,7 +38,7 @@ class Main extends StatelessWidget {
         switch (snapshot.connectionState) {
           case ConnectionState.done:
           final user = AuthService.firebase().currentUser;
-          return LoginView();
+          return CommunityPage();
           // if (user != null) {
           //   return const HomePage();
           // } else {
