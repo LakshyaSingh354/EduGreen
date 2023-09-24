@@ -62,6 +62,9 @@ flutter:
       fonts:
         - asset: assets/fonts/Inika-Regular.ttf
         - asset: assets/fonts/Inika-Bold.ttf
+    - family: Glass Antiqua
+      fonts:
+        - asset: assets/fonts/GlassAntiqua-Regular.ttf
   assets:
     - assets/images/
 
