@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sih_app/views/home_page.dart';
 import 'package:sih_app/views/home_views/dashboard_page.dart';
+import 'package:sih_app/views/home_views/resource_page.dart';
+import 'package:sih_app/views/home_views/resource_page_views.dart';
 import 'package:sih_app/views/welcome_screen.dart';
 import 'package:sih_app/views/home_views/community_page.dart';
 import 'constants/routes.dart';
@@ -23,6 +25,10 @@ void main() async {
         loginRoute: (context) => const LoginView(),
         registerRoute: (context) => const RegisterView(),
         homeRoute: (context) => const HomePage(),
+        articleRoute: (context) => const ArticlesPage(),
+        videoRoute: (context) => const VideosPage(),
+        caseStudyRoute: (context) => const CaseStudiesPage(),
+        chatbotRoute: (context) => const ChatbotPage(),
       }
     )
       );
@@ -39,7 +45,7 @@ class Main extends StatelessWidget {
         switch (snapshot.connectionState) {
           case ConnectionState.done:
           final user = AuthService.firebase().currentUser;
-          return CentralDashboardPage();
+          return HomePage();
           // if (user != null) {
           //   return const HomePage();
           // } else {

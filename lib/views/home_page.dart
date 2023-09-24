@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sih_app/views/home_views/resource_page.dart';
 
 import 'home_views.dart';
+import 'home_views/community_page.dart';
+import 'home_views/dashboard_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,10 +15,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
-    const LearnPage(),
-    const QuizPage(),
     const CommunityPage(),
     const CentralDashboardPage(),
+    const ResourcePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,26 +33,24 @@ class _HomePageState extends State<HomePage> {
           });
         },
           backgroundColor: Colors.white,
-          selectedItemColor: Colors.black,
+          selectedItemColor: Color(0xFF03493C),
           unselectedItemColor: Colors.grey,
           showUnselectedLabels: true,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Learn',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.question_answer),
-            label: 'Quiz',
-          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.people),
             label: 'Community',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.dashboard),
+            icon: Icon(Icons.dashboard, size: 40,),
             label: 'Dashboard',
+            
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'Resources',
+          ),
+          
         ],
       ),
     );

@@ -3,3 +3,7 @@ const registerRoute = '/register/';
 const introRoute = '/intro/';
 const homeRoute = '/home/';
 const verifyEmailRoute = '/verify/';
+const articleRoute = '/article/';
+const videoRoute = '/videos/';
+const caseStudyRoute = '/caseStudy/';
+const chatbotRoute = '/chatbot/';
