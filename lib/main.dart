@@ -16,9 +16,11 @@ void main() async {
     MaterialApp(
       // title: 'SIH App',
       debugShowCheckedModeBanner: false,
+      
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
       ),
+      
       home: const Main(),
       routes: {
         introRoute: (context) => IntroScreen(context),
@@ -45,7 +47,7 @@ class Main extends StatelessWidget {
         switch (snapshot.connectionState) {
           case ConnectionState.done:
           final user = AuthService.firebase().currentUser;
-          return HomePage();
+          return IntroScreen(context);
           // if (user != null) {
           //   return const HomePage();
           // } else {
