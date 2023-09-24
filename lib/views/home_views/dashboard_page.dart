@@ -335,14 +335,34 @@ class _CentralDashboardPageState extends State<CentralDashboardPage> {
                           ),
                         ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset('assets/images/cerificate_prototype.jpeg'),
+                      )
                     ],
                   ),
                 )
               ] 
             ),
-          )
+          ),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 230, 0),
+                child: Text('Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Glass Antiqua',
+                  fontSize: 50
+                ),),
+              )
+            ],
+          ),
         ],
       ),
+      
     );
+    
+    
   }
 }
